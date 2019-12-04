@@ -6,6 +6,20 @@ defmodule ArtooDetoo.Application do
   use Application
 
   def start(_type, _args) do
+
+    config = Application.fetch_env!(:artoo_detoo, :nn)
+    :ets.new(config.table, [
+      :set,
+      :public,
+      :named_table,
+      read_concurrency: true,
+      write_concurrency: true
+    ])
+    #Emlt.NN.Network.init(config)
+    :dets.open_file(config.backup, type: :set, ram_file: true)
+    :dets.to_ets(config.backup, config.table)
+    #:ets.from_dets(config.table, dets_tab)
+    :observer.start
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts

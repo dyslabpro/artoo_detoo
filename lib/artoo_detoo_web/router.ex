@@ -17,6 +17,8 @@ defmodule ArtooDetooWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
+    post "/check", NnController, :check
   end
 
   # Other scopes may use custom stacks.
