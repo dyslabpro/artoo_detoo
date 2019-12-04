@@ -4,7 +4,7 @@
             <img max-width="150px" src="<%= Routes.static_path(@conn, "/images/logo.svg") %>" alt="Artoo Detoo"/>            
         </div>
         <div class="column column-80">
-            <div id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="700">
+            <div id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="700" style="overflow-y: scroll; height:400px;">
                 <span data-ty="input">Below you see the canvas element where you can draw any digit (0-9).</span>
                 <span data-ty="input">I will try to recognize it</span>
                 <span data-ty="input">When you finish drawing the digit, click on the link "recognize"</span>

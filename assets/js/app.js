@@ -57,6 +57,8 @@ var context = canvas.getContext('2d');
 context.strokeStyle = '#df4b26';
 context.lineJoin = 'round';
 context.lineWidth = 20;
+context.shadowBlur = 5;
+context.shadowColor="#d16e54";
 
 var isPaint = false;
 var lastPointerPosition;

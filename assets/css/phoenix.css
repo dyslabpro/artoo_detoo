@@ -179,7 +179,7 @@ header nav a {
 }
 
 [data-termynal]:after {
-  content: 'bash';
+  content: 'Artoo Detoo v0.0.1';
   position: absolute;
   color: var(--color-text-subtle);
   top: 5px;
